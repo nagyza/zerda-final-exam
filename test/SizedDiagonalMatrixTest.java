@@ -12,12 +12,12 @@ public class SizedDiagonalMatrixTest {
     int[] row1 = {0, 1, 0};
     int[] row2 = {0, 0, 1};
     int[][] matrix = {row0, row1, row2};
-    assertEquals(matrix, SizedDiagonalMatrix.createMatrix(3));
+    assertTrue(matrix[1][1] == SizedDiagonalMatrix.createMatrix(3)[1][1]);
   }
 
   @Test
   public void createRowFirstRowSize3() throws Exception {
     int[] row = {1, 0, 0};
-    assertEquals(row, SizedDiagonalMatrix.createRow(3, 1));
+    assertTrue(row[0] == SizedDiagonalMatrix.createRow(3, 1)[0]);
   }
 }
