@@ -8,7 +8,8 @@ public class SizedDiagonalMatrix {
   public static int[][] createMatrix(int size) {
     int[][] matrix = new int[size][size];
     for (int i = 0; i < size; i++) {
-
+      int[] row = createRow(size, i + 1);
+      matrix[i] = row;
     }
     return matrix;
   }
